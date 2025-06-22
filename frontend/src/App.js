@@ -53,7 +53,7 @@ function App() {
       formData.append('file', selectedFile);
       formData.append('num_cards', numCards);
       
-      const response = await fetch('http://localhost:8000/upload-pdf', {
+      const response = await fetch('https://ai-flashcard-generator.onrender.com/upload-pdf', {
         method: 'POST',
         body: formData,
       });
