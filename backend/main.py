@@ -12,7 +12,9 @@ import json
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)
+
+# Configure CORS to allow requests from your deployed frontend
+CORS(app, resources={r"/*": {"origins": "https://ai-flashcard-generator-daz9.vercel.app"}})
 
 # Configure Google Gemini
 try:
